@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alperen Korkut - CV</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #2e3a59;
+        }
+        .profile {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .profile img {
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .info ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .info li {
+            margin-bottom: 5px;
+        }
+        .section {
+            margin-top: 30px;
+        }
+        button {
+            background-color: #2e3a59;
+            color: white;
+            padding: 8px 16px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #445c7c;
+        }
+        .contact b {
+            color: crimson;
+        }
+        .dark-mode {
+            background-color: #222;
+            color: #eee;
+        }
+        .dark-mode .container {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="toggleDarkMode()">🌗 Toggle Dark Mode</button>
+
+        <div class="profile">
+            <img src="resimler/a.png" alt="Alperen's Photo">
+            <div class="info">
+                <h1>Alperen Korkut</h1>
+                <ul>
+                    <li><em>Game Producer / Web Designer</em></li>
+                    <li>Yunusemre, Manisa, Turkey</li>
+                    <li>Karabük University - Computer Engineering (2022)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <button onclick="toggleSkills()">Show/Hide Skills</button>
+            <div id="skillsSection" style="display:none;">
+                <h3>Computer Languages</h3>
+                <ul>
+                    <li>CSS (Low)</li>
+                    <li>C (Mid)</li>
+                    <li>Python (Low)</li>
+                    <li>Java (Low)</li>
+                </ul>
+
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Leadership</li>
+                    <li>Communication Skills</li>
+                    <li>Problem-Solving</li>
+                    <li>Teamwork</li>
+                </ul>
+
+                <h3>Languages</h3>
+                <ul>
+                    <li>Turkish</li>
+                    <li>English (C1)</li>
+                    <li>German (A2)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>About Me</h2>
+            <p>I am <em>Alperen Korkut</em>. I started studying at Karabük University in 2022 and improved myself in the field of gaming.</p>
+            <p>I led 2 teams and participated in multiple competitions, building solid teamwork skills and flexible work ethics.</p>
+            <p>I won two awards (1 individual and 1 team) in game development and cybersecurity at Teknofest.</p>
+        </div>
+
+        <div class="section contact">
+            <h2>Contact</h2>
+            <ul>
+                <li>Phone: <b>+90 553 104 03 17</b></li>
+                <li>Email: <b>alpmr37@gmail.com</b></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleSkills() {
+            const section = document.getElementById('skillsSection');
+            section.style.display = section.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
